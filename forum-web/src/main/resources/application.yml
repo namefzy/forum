@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&allowPublicKeyRetrieval=true
+#  mapper-locations: cn/com/cncp/mapper/*.xml
+#  type-aliases-package: cn.com.cncp.mapper
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    https://github.com/abel533/Mapper/wiki/3.config 通用mapper参数配置
+mapper:
+  identity: MYSQL
+  style: camelhumpAndLowercase
+  mappers: cn.com.cncp.common.TkMapper
+mybatis:
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+pagehelper:
+  helper-dialect: mysql
+
