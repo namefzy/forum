@@ -15,7 +15,7 @@ public class CountryController {
     private ICountryService countryService;
     @GetMapping("selectCountryById")
     public List<Country> selectCountryById(){
-        PageHelper.startPage(0,3);
+        PageHelper.startPage(0,2);
         List<Country> countries = countryService.selectAll();
         return countries;
     }

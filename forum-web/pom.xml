@@ -22,6 +22,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,14 +53,20 @@
     <build>
         <plugins>
             <plugin>
+                <!--可以直接通过java -jar方式运行项目
+                    解决直接在父项目中导入报错：spring-boot-maven-plugin
+                    https://blog.csdn.net/SnailMann/article/details/81710461
+                -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!--springboot启动类-->
+                    <!--找到springboot启动类位置-->
                     <mainClass>
                         cn.com.cncp.SpringbootApplication
                     </mainClass>
                     <executable>true</executable>
+                    <!--热加载功能实现-->
+                    <fork>true</fork>
                 </configuration>
                 <executions>
                     <execution>

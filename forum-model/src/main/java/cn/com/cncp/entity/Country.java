@@ -5,78 +5,75 @@ import javax.persistence.*;
 
 public class Country implements Serializable {
     /**
-     * 主键
+     * 涓婚敭
      */
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     /**
-     * 名称
+     * 鍚嶇О
      */
-    @Column(name = "country_name")
-    private String countryName;
+    private String countryname;
 
     /**
-     * 代码
+     * 浠ｇ爜
      */
-    @Column(name = "country_code")
-    private String countryCode;
+    private String countrycode;
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 获取主键
+     * 鑾峰彇涓婚敭
      *
-     * @return id - 主键
+     * @return id - 涓婚敭
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * 设置主键
+     * 璁剧疆涓婚敭
      *
-     * @param id 主键
+     * @param id 涓婚敭
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * 获取名称
+     * 鑾峰彇鍚嶇О
      *
-     * @return country_name - 名称
+     * @return countryname - 鍚嶇О
      */
-    public String getCountryName() {
-        return countryName;
+    public String getCountryname() {
+        return countryname;
     }
 
     /**
-     * 设置名称
+     * 璁剧疆鍚嶇О
      *
-     * @param countryName 名称
+     * @param countryname 鍚嶇О
      */
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
+    public void setCountryname(String countryname) {
+        this.countryname = countryname;
     }
 
     /**
-     * 获取代码
+     * 鑾峰彇浠ｇ爜
      *
-     * @return country_code - 代码
+     * @return countrycode - 浠ｇ爜
      */
-    public String getCountryCode() {
-        return countryCode;
+    public String getCountrycode() {
+        return countrycode;
     }
 
     /**
-     * 设置代码
+     * 璁剧疆浠ｇ爜
      *
-     * @param countryCode 代码
+     * @param countrycode 浠ｇ爜
      */
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
+    public void setCountrycode(String countrycode) {
+        this.countrycode = countrycode;
     }
 
     @Override
@@ -86,8 +83,8 @@ public class Country implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", countryName=").append(countryName);
-        sb.append(", countryCode=").append(countryCode);
+        sb.append(", countryname=").append(countryname);
+        sb.append(", countrycode=").append(countrycode);
         sb.append("]");
         return sb.toString();
     }
