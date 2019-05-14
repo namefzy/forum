@@ -19,11 +19,10 @@ mybatis:
   configuration:
     cache-enabled: false
     map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
 pagehelper:
   helper-dialect: mysql
-#logging:
-#  config: classpath:log/logback-spring.xml
+logging:
+  config: classpath:log/log4j2-spring.xml
 #  logging.
 
 #日志实现：

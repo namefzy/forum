@@ -1,0 +1,8 @@
+.settings/
+bin/
+target/
+test/
+META-INF/
+.mymetadata
+.classpath
+.project

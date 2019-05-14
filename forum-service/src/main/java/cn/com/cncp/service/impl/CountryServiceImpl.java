@@ -22,7 +22,7 @@ public class CountryServiceImpl implements ICountryService {
     }
 
     public List<Country> simulation() {
-//        List<Country> simulation = countryMapper.simulation();
+        List<Country> simulation = countryMapper.simulation();
 //        System.out.println(simulation);
         return null;
     }
