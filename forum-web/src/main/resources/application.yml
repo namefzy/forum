@@ -6,15 +6,22 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&allowPublicKeyRetrieval=true
+    data: classpath:schema.sql
+    initialization-mode: always
+    continue-on-error: true
+#    schema: classpath:执行创建脚本
+#  liquibase:
+#    change-log: classpath:/db/changelog/db.changelog-master.xml
+#    enabled: true
 #  mapper-locations: cn/com/cncp/mapper/*.xml
 #  type-aliases-package: cn.com.cncp.mapper
 #  configuration:
 #    map-underscore-to-camel-case: true
 #    https://github.com/abel533/Mapper/wiki/3.config 通用mapper参数配置
-mapper:
-  identity: MYSQL
-  style: camelhumpAndLowercase
-  mappers: cn.com.cncp.common.TkMapper
+#mapper:
+#  identity: MYSQL
+#  style: camelhumpAndLowercase
+#  mappers: cn.com.cncp.common.TkMapper
 mybatis:
   configuration:
     cache-enabled: false
@@ -23,7 +30,7 @@ pagehelper:
   helper-dialect: mysql
 logging:
   config: classpath:log/log4j2-spring.xml
-#  logging.
+
 
 #日志实现：
 #  开发环境、测试环境打印debug级别的日志；sql语句参数以及sql打印出来；日志文件存放；日志文件保存时间

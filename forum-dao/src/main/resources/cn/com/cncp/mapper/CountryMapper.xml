@@ -6,8 +6,9 @@
       WARNING - @mbg.generated
     -->
     <result column="id" jdbcType="INTEGER" property="id" />
-    <result column="countryname" jdbcType="VARCHAR" property="countryname" />
-    <result column="countrycode" jdbcType="VARCHAR" property="countrycode" />
+    <result column="country_name" jdbcType="VARCHAR" property="countryName" />
+    <result column="country_code" jdbcType="VARCHAR" property="countryCode" />
+    <result column="country_num" jdbcType="INTEGER" property="countryNum" />
   </resultMap>
   <select id="simulation" resultType="cn.com.cncp.entity.Country">
     select * from country

@@ -3,22 +3,29 @@ package cn.com.cncp.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 
+@Table(name = "t_country")
 public class Country implements Serializable {
     /**
      * 主键
      */
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     /**
      * 名称
      */
-    private String countryname;
+    @Column(name = "country_name")
+    private String countryName;
 
     /**
      * 代码
      */
-    private String countrycode;
+    @Column(name = "country_code")
+    private String countryCode;
+
+    @Column(name = "country_num")
+    private Integer countryNum;
 
     private static final long serialVersionUID = 1L;
 
@@ -43,37 +50,51 @@ public class Country implements Serializable {
     /**
      * 获取名称
      *
-     * @return countryname - 名称
+     * @return country_name - 名称
      */
-    public String getCountryname() {
-        return countryname;
+    public String getCountryName() {
+        return countryName;
     }
 
     /**
      * 设置名称
      *
-     * @param countryname 名称
+     * @param countryName 名称
      */
-    public void setCountryname(String countryname) {
-        this.countryname = countryname;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
     /**
      * 获取代码
      *
-     * @return countrycode - 代码
+     * @return country_code - 代码
      */
-    public String getCountrycode() {
-        return countrycode;
+    public String getCountryCode() {
+        return countryCode;
     }
 
     /**
      * 设置代码
      *
-     * @param countrycode 代码
+     * @param countryCode 代码
      */
-    public void setCountrycode(String countrycode) {
-        this.countrycode = countrycode;
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    /**
+     * @return country_num
+     */
+    public Integer getCountryNum() {
+        return countryNum;
+    }
+
+    /**
+     * @param countryNum
+     */
+    public void setCountryNum(Integer countryNum) {
+        this.countryNum = countryNum;
     }
 
     @Override
@@ -83,8 +104,9 @@ public class Country implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", countryname=").append(countryname);
-        sb.append(", countrycode=").append(countrycode);
+        sb.append(", countryName=").append(countryName);
+        sb.append(", countryCode=").append(countryCode);
+        sb.append(", countryNum=").append(countryNum);
         sb.append("]");
         return sb.toString();
     }

@@ -8,12 +8,15 @@
     <properties resource="application.yml" />
     <!-- MyBatis3Simple：不生成 Example相关类及方法 -->
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-        <property name="beginningDelimiter" value="`" />
-        <property name="endingDelimiter" value="`" />
         <!-- 指定生成 Mapper 的继承模板 -->
 <!--        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <property name="mappers" value="cn.com.cncp.common.TkMapper" />
+<!--            <property name="caseSensitive" value="true"/>-->
+            <!--是否强制生成注解-->
+            <property name="forceAnnotation" value="false"/>
+<!--            <property name="beginningDelimiter" value="`"/>-->
+<!--            <property name="endingDelimiter" value="`"/>-->
         </plugin>
 
         <!-- 生成 JavaBean 对象重写 toString方法 -->
@@ -42,8 +45,14 @@
                              targetProject="../forum-dao/src/main/java" type="XMLMAPPER" />
 
         <!-- tableName：数据库表名，domainObjectName：生成文件名 ，schema：数据源-->
-        <table tableName="country">
+        <table tableName="t_country" domainObjectName="Country">
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />
+        </table>
+        <table tableName="t_demand" domainObjectName="Demand">
+            <generatedKey column="td_id" sqlStatement="Mysql" identity="true" />
+        </table>
+        <table tableName="t_response" domainObjectName="Response">
+            <generatedKey column="tr_id" sqlStatement="Mysql" identity="true" />
         </table>
     </context>
 

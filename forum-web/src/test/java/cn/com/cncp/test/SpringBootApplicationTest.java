@@ -20,6 +20,7 @@ import static org.apache.ibatis.io.Resources.getResourceAsStream;
 public class SpringBootApplicationTest {
     @Test
     public void contextLoads()throws Exception {
+
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         ConfigurationParser cp = new ConfigurationParser(warnings);

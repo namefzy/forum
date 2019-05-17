@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.cncp.mapper.DemandMapper">
+  <resultMap id="BaseResultMap" type="cn.com.cncp.entity.Demand">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="td_id" jdbcType="VARCHAR" property="tdId" />
+    <result column="td_number" jdbcType="VARCHAR" property="tdNumber" />
+    <result column="td_title" jdbcType="VARCHAR" property="tdTitle" />
+    <result column="td_plate_type" jdbcType="VARCHAR" property="tdPlateType" />
+    <result column="td_function_one" jdbcType="VARCHAR" property="tdFunctionOne" />
+    <result column="td_label" jdbcType="VARCHAR" property="tdLabel" />
+    <result column="td_scene" jdbcType="VARCHAR" property="tdScene" />
+    <result column="td_stauts" jdbcType="VARCHAR" property="tdStauts" />
+    <result column="td_is_delete" jdbcType="VARCHAR" property="tdIsDelete" />
+    <result column="td_apply_org_type" jdbcType="VARCHAR" property="tdApplyOrgType" />
+    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId" />
+    <result column="create_user_name" jdbcType="VARCHAR" property="createUserName" />
+    <result column="create_user_org_id" jdbcType="VARCHAR" property="createUserOrgId" />
+    <result column="create_user_org_name" jdbcType="VARCHAR" property="createUserOrgName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="apply_user_org_name" jdbcType="VARCHAR" property="applyUserOrgName" />
+    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId" />
+    <result column="update_user_name" jdbcType="VARCHAR" property="updateUserName" />
+    <result column="update_user_org_id" jdbcType="VARCHAR" property="updateUserOrgId" />
+    <result column="update_user_org_name" jdbcType="VARCHAR" property="updateUserOrgName" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="response_times" jdbcType="INTEGER" property="responseTimes" />
+    <result column="browse_times" jdbcType="INTEGER" property="browseTimes" />
+    <result column="td_content" jdbcType="LONGVARCHAR" property="tdContent" />
+  </resultMap>
+</mapper>

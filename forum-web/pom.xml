@@ -48,6 +48,11 @@
             <optional>true</optional>
             <scope>true</scope>
         </dependency>
+        <!--启动执行sql脚本的库-->
+<!--        <dependency>-->
+<!--            <groupId>org.liquibase</groupId>-->
+<!--            <artifactId>liquibase-core</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -76,7 +81,14 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!-- 设置maven打包时不执行单元测试 -->
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

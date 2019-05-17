@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.cncp.mapper.ResponseMapper">
+  <resultMap id="BaseResultMap" type="cn.com.cncp.entity.Response">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="tr_id" jdbcType="VARCHAR" property="trId" />
+    <result column="td_id" jdbcType="VARCHAR" property="tdId" />
+    <result column="td_title" jdbcType="VARCHAR" property="tdTitle" />
+    <result column="tr_number" jdbcType="VARCHAR" property="trNumber" />
+    <result column="tr_content" jdbcType="VARCHAR" property="trContent" />
+    <result column="tr_right" jdbcType="VARCHAR" property="trRight" />
+    <result column="tr_stauts" jdbcType="VARCHAR" property="trStauts" />
+    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId" />
+    <result column="create_user_name" jdbcType="VARCHAR" property="createUserName" />
+    <result column="create_user_org_id" jdbcType="VARCHAR" property="createUserOrgId" />
+    <result column="create_user_org_name" jdbcType="VARCHAR" property="createUserOrgName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId" />
+    <result column="update_user_name" jdbcType="VARCHAR" property="updateUserName" />
+    <result column="update_user_org_id" jdbcType="VARCHAR" property="updateUserOrgId" />
+    <result column="update_user_org_name" jdbcType="VARCHAR" property="updateUserOrgName" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

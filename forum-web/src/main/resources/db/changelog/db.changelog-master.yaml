@@ -1,0 +1,7 @@
+changeSet:
+    id: 3
+    author: Levin
+    changes:
+      sqlFile:
+          encoding: utf8
+          path: classpath:db/changelog/sqlfile/test1.sql
