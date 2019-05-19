@@ -4,11 +4,19 @@ spring:
   datasource:
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&allowPublicKeyRetrieval=true
     data: classpath:schema.sql
     initialization-mode: always
     continue-on-error: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+
+
 #    schema: classpath:执行创建脚本
 #  liquibase:
 #    change-log: classpath:/db/changelog/db.changelog-master.xml
@@ -30,12 +38,22 @@ pagehelper:
   helper-dialect: mysql
 logging:
   config: classpath:log/log4j2-spring.xml
-
-
 #日志实现：
 #  开发环境、测试环境打印debug级别的日志；sql语句参数以及sql打印出来；日志文件存放；日志文件保存时间
 #  生产环境打印对应级别的日志
+#swagger:
+#  butler:
+#    api-docs-path: /v2/api-docs
+#    swagger-version: 2.0
 
+# swagger resource
+#  zuul.routes.user.path=/service-a/**
+#  zuul.routes.user.url=http://localhost:10010/
+#  swagger.butler.resources.user.name=user-service
 
-
-
+  # swagger resource
+#  zuul.routes.product.path=/service-b/**
+#  zuul.routes.product.url=http://localhost:10020/
+#  swagger.butler.resources.product.name=product-service
+#  swagger.butler.resources.product.api-docs-path=/xxx/v2/api-docs
+#  swagger.butler.resources.product.swagger-version=2.0

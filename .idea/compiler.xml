@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="forum-dao" />
         <module name="forum-web" />
         <module name="forum-service" />
-        <module name="forum-dao" />
+        <module name="forum-common" />
         <module name="forum-model" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="forum-common" options="-parameters" />
+      <module name="forum-dao" options="-parameters" />
+      <module name="forum-model" options="-parameters" />
+      <module name="forum-service" options="-parameters" />
+      <module name="forum-web" options="-parameters" />
+    </option>
   </component>
 </project>

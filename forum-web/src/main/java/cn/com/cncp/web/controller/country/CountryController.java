@@ -27,6 +27,7 @@ public class CountryController {
     @GetMapping("complex")
     public List<Country> simulation(){
         int i = 1/0;
+
         return countryService.simulation();
     }
 }

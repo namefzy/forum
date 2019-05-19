@@ -48,6 +48,17 @@
             <optional>true</optional>
             <scope>true</scope>
         </dependency>
+
+        <!--集成thymeleaf模板 设置异常处理页面-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.didispace</groupId>-->
+<!--            <artifactId>swagger-butler-core</artifactId>-->
+<!--        </dependency>-->
         <!--启动执行sql脚本的库-->
 <!--        <dependency>-->
 <!--            <groupId>org.liquibase</groupId>-->
