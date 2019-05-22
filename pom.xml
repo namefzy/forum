@@ -22,6 +22,7 @@
         <module>forum-web</module>
         <module>forum-common</module>
         <module>forum-auth</module>
+        <module>note</module>
     </modules>
 
     <properties>

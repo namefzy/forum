@@ -25,6 +25,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
      */
     @Override
     public void configure(HttpSecurity http) throws Exception {
+//        super.configure(http);使用默认的访问401
         http.requestMatchers().antMatchers("/haha/**")
 //                .and().formLogin().usernameParameter("username") // default is username
 //                .passwordParameter("password") // default is password
