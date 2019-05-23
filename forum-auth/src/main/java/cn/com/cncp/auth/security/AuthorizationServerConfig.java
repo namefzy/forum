@@ -18,7 +18,28 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-    @Autowired
+    /**
+     * inMemory:存储客户端信息
+     * withClient：客户端id
+     * secret:客户端密钥
+     * authorizedGrantTypes：该client允许的授权类型
+     * scopes:允许的授权范围
+     * @param clients
+     * @throws Exception
+     * 测试：
+     * #（该步骤为**授权码模式中的A**），需要附上客户端申请认证的参数（**A步骤中所包含的参数**）
+     * localhost:8081/oauth/authorize?client_id=client&response_type=code&redirect_uri=http://www.baidu.com
+     */
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        //添加客户端信息
+        clients.inMemory()                 // 使用in-memory存储客户端信息
+                .withClient("client")       // client_id
+                .secret("secret")                   // client_secret
+                .authorizedGrantTypes("authorization_code")     // 该client允许的授权类型
+                .scopes("app")
+                .redirectUris("http://www.baidu.com");//注册
+    }
+    /*@Autowired
     private RedisConnectionFactory connectionFactory;
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         super.configure(security);
@@ -40,6 +61,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public TokenStore tokenStore() {
         return new RedisTokenStore(connectionFactory);
     }
+    */
     public static void main(String[] args) {
         System.out.println(new org.apache.tomcat.util.codec.binary.Base64().encodeAsString("my-client-1:12345678".getBytes()));
         System.out.println(java.util.Base64.getEncoder().encodeToString("my-client-1:12345678".getBytes()));

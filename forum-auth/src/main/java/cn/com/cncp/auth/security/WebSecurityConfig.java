@@ -33,12 +33,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("zhangsan")
-                .password("$2a$10$qsJ/Oy1RmUxFA.YtDT8RJ.Y2kU3U4z0jvd35YmiMOAPpD.nZUIRMC")
-                .roles("USER")
-                .and()
-                .withUser("lisi")
-                .password("$2a$10$qsJ/Oy1RmUxFA.YtDT8RJ.Y2kU3U4z0jvd35YmiMOAPpD.nZUIRMC")
-                .roles("USER", "ADMIN");
+                .password("$2a$10$BMbN.S35uqH2QtUaU5/qwuRxY0xdvIOjirCmuVeEhyWnz1VSjB1e6")
+                .roles("USER");
     }
 
     @Override

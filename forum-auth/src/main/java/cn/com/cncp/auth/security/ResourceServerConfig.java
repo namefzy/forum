@@ -23,6 +23,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
      * requestMatchers():添加匹配规则
      * formLogin():该方法是用于配置登录相关的设置的
      */
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
 //        super.configure(http);使用默认的访问401
