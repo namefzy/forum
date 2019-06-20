@@ -1,4 +1,6 @@
 # forum
+阻塞与非阻塞，同步与异步
+#https://zhuanlan.zhihu.com/p/66148226?utm_source=qq&utm_medium=social&utm_oi=672384036853518336
 重构创新平台
 #集成通用mapper问题：
     没有整合starter
