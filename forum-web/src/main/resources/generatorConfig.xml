@@ -45,15 +45,85 @@
                              targetProject="../forum-dao/src/main/java" type="XMLMAPPER" />
 
         <!-- tableName：数据库表名，domainObjectName：生成文件名 ，schema：数据源-->
-        <table tableName="t_country" domainObjectName="Country">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
-        </table>
-        <table tableName="t_demand" domainObjectName="Demand">
-            <generatedKey column="td_id" sqlStatement="Mysql" identity="true" />
-        </table>
-        <table tableName="t_response" domainObjectName="Response">
-            <generatedKey column="tr_id" sqlStatement="Mysql" identity="true" />
-        </table>
+<!--        <table tableName="t_user" domainObjectName="User">-->
+<!--            <generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_address" domainObjectName="UserAddress">-->
+<!--            <generatedKey column="address_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_archives" domainObjectName="UserArchives">-->
+<!--            <generatedKey column="zz_daid" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_army_info" domainObjectName="UserArmyInfo">-->
+<!--            <generatedKey column="army_info_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+
+<!--        <table tableName="t_user_assess_info" domainObjectName="UserAssessInfo">-->
+<!--            <generatedKey column="assess_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_communication" domainObjectName="UserCommunication">-->
+<!--            <generatedKey column="tx_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_contract" domainObjectName="UserContract">-->
+<!--            <generatedKey column="ht_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_education" domainObjectName="UserEducation">-->
+<!--            <generatedKey column="xl_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_experts" domainObjectName="UserExperts">-->
+<!--            <generatedKey column="expert_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_family" domainObjectName="UserFamily">-->
+<!--            <generatedKey column="family_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_family" domainObjectName="UserFamily">-->
+<!--            <generatedKey column="family_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_foreign_info" domainObjectName="UserForeignInfo">-->
+<!--            <generatedKey column="zz_ks_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_health_info" domainObjectName="UserHealthInfo">-->
+<!--            <generatedKey column="check_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_id" domainObjectName="UserId">-->
+<!--            <generatedKey column="ic_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_org" domainObjectName="UserOrg">-->
+<!--            <generatedKey column="user_org_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_political" domainObjectName="UserPolitical">-->
+<!--            <generatedKey column="pcode_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_professional_technology" domainObjectName="UserProfessionalTechnology">-->
+<!--            <generatedKey column="zz_zsid" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_reward" domainObjectName="UserReward">-->
+<!--            <generatedKey column="reward_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_special_event" domainObjectName="UserSpecialEvent">-->
+<!--            <generatedKey column="special_event_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_training" domainObjectName="UserTraining">-->
+<!--            <generatedKey column="train_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="t_user_work_record" domainObjectName="UserWorkRecord">-->
+<!--            <generatedKey column="work_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="tb_dictionary" domainObjectName="TbDictionary">-->
+<!--            <generatedKey column="dict_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="tb_dictionary_item" domainObjectName="TbDictionaryItem">-->
+<!--            <generatedKey column="item_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="tb_org" domainObjectName="TbOrg">-->
+<!--            <generatedKey column="org_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+<!--        <table tableName="tb_user" domainObjectName="TbUser">-->
+<!--            <generatedKey column="user_id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
+                <table tableName="t_roster_history" domainObjectName="RosterHistory">
+                    <generatedKey column="id" sqlStatement="Mysql" identity="true" />
+                </table>
     </context>
 
 </generatorConfiguration>

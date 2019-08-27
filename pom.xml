@@ -37,11 +37,12 @@
         <security-oauth.version>2.3.5.RELEASE</security-oauth.version>
 <!--        <swagger.version>2.0.0</swagger.version>-->
     </properties>
-    <!--作用范围 compile:编译、测试、运行、打包都会编译
-                                test:测试时会编译
-                                runtime：编译时不参与；运行时用
-                                system：
-                                <scope>compile</scope>
+    <!--作用范围
+                        compile:编译、测试、运行、打包都会编译
+                        test:测试时会编译
+                        runtime：编译时不参与；运行时用
+                        system：
+                        <scope>compile</scope>
                     -->
     <dependencyManagement>
         <dependencies>
